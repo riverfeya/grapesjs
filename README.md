@@ -10,15 +10,15 @@
 <p align="center"><img src="http://grapesjs.com/img/grapesjs-front-page-m.jpg" alt="GrapesJS" width="500" align="center"/></p>
 
 
-GrapesJS is a free and open source Web Builder Framework which helps building HTML templates, faster and easily, to be delivered in sites, newsletters or mobile apps. Mainly, GrapesJS was designed to be used inside a [CMS] to speed up the creation of dynamic templates. To better understand this concept check the image below
+GrapesJS это бесплатный и c открытым исходным кодом Web Builder Framework который помогает создавать шаблоны HTML, быстрее и проще, доставляться на сайтах, в новостных рассылках или мобильных приложениях. В основном, GrapesJS был разработан для использования внутри [CMS] чтобы ускорить создание динамических шаблонов. Чтобы лучше понять эту концепцию, проверьте изображение ниже
 
 <br/>
 <p align="center"><img src="http://grapesjs.com/img/gjs-concept.png" alt="GrapesJS - Style Manager" height="400" align="center"/></p>
 <br/>
 
-Generally any 'template system', that you'd find in various applications like CMS, is composed by the **structure** (HTML), **style** (CSS) and **variables**, which are then replaced with other templates and contents on server-side and rendered on client.
+Вообще любой 'template system', что вы найдете в различных приложениях, таких как CMS, состоит из **structure** (HTML), **style** (CSS) и **variables**, которые затем заменяются другими шаблонами и содержимым на стороне сервера и отображаются на клиенте.
 
-This demos show examples of what is possible to achieve:
+Это демо показывает примеры того, чего можно достичь:
 Webpage Demo - http://grapesjs.com/demo.html
 Newsletter Demo - http://grapesjs.com/demo-newsletter-editor.html
 
@@ -28,18 +28,20 @@ Newsletter Demo - http://grapesjs.com/demo-newsletter-editor.html
 
 ## Table of contents
 
-* [Features](#features)
-* [Download](#download)
-* [Usage](#usage)
-* [Development](#development)
-* [Documentation](#documentation)
-* [API](#api)
-* [Testing](#testing)
-* [Plugins](#plugins)
-* [Support](#support)
-* [Changelog](https://github.com/artf/grapesjs/releases)
-* [Contributing](https://github.com/artf/grapesjs/blob/master/CONTRIBUTING.md)
-* [License](#license)
+- [GrapesJS](#grapesjs)
+  - [Table of contents](#table-of-contents)
+  - [Features](#features)
+  - [Download](#download)
+  - [Usage](#usage)
+  - [Development](#development)
+  - [Documentation](#documentation)
+  - [API](#api)
+  - [Testing](#testing)
+  - [Plugins](#plugins)
+    - [Extensions](#extensions)
+    - [Presets](#presets)
+  - [Support](#support)
+  - [License](#license)
 
 
 
@@ -56,7 +58,7 @@ Newsletter Demo - http://grapesjs.com/demo-newsletter-editor.html
 
 * Local and remote storage
 
-* Default built-in commands (basically for creating and managing different components)
+* Default built-in commands (в основном для создания и управления различными компонентами)
 
 
 
@@ -76,7 +78,7 @@ Newsletter Demo - http://grapesjs.com/demo-newsletter-editor.html
 * GIT
   * `git clone https://github.com/artf/grapesjs.git`
 
-For the development purpose you should follow instructions below.
+Для целей разработки вы должны следовать инструкциям ниже.
 
 
 
@@ -99,7 +101,7 @@ For the development purpose you should follow instructions below.
 </script>
 ```
 
-You could also grab the content directly from the element with `fromElement` property
+Вы также можете получить содержимое непосредственно из элемента с помощью свойства `fromElement` 
 
 ```html
 <div id="gjs">
@@ -115,14 +117,14 @@ You could also grab the content directly from the element with `fromElement` pro
 </script>
 ```
 
-For more practical example I suggest to look up the code inside this demo: http://grapesjs.com/demo.html
+Для более практического примера я предлагаю посмотреть код внутри этой демонстрации: http://grapesjs.com/demo.html
 
 
 ## Development
 
-GrapesJS uses [Webpack](https://github.com/webpack/webpack) as a module bundler and [Babel](https://github.com/babel/babel) as a compiler.
+GrapesJS использует [Webpack](https://github.com/webpack/webpack) в качестве модуля сборки [Babel](https://github.com/babel/babel) как сборщик.
 
-Clone the repository and install all the necessary dependencies
+Клонируйте репозиторий и установите все необходимые зависимости
 
 ```sh
 $ git clone https://github.com/artf/grapesjs.git
@@ -130,13 +132,13 @@ $ cd grapesjs
 $ npm i
 ```
 
-Start the dev server
+Запустите сервер разработки
 
 ```sh
 $ npm start
 ```
 
-Once the development server is started you should be able to reach the demo page (eg. `http://localhost:8080`)
+После запуска сервера разработки вы сможете попасть на демонстрационную страницу (eg. `http://localhost:8080`)
 
 
 
@@ -144,7 +146,7 @@ Once the development server is started you should be able to reach the demo page
 
 ## Documentation
 
-Check the getting started guide here: [Documentation]
+Проверьте руководство по началу работы здесь: [Documentation]
 
 
 
@@ -152,7 +154,7 @@ Check the getting started guide here: [Documentation]
 
 ## API
 
-API References could be found here: [API-Reference]
+Ссылки на API можно найти здесь: [API-Reference]
 
 
 
@@ -171,28 +173,28 @@ $ npm test
 ## Plugins
 
 ### Extensions
-* [grapesjs-plugin-export](https://github.com/artf/grapesjs-plugin-export) - Export GrapesJS templates in a zip archive
-* [grapesjs-plugin-filestack](https://github.com/artf/grapesjs-plugin-filestack) - Add Filestack uploader in Asset Manager
-* [grapesjs-plugin-ckeditor](https://github.com/artf/grapesjs-plugin-ckeditor) - Replaces the built-in RTE with CKEditor
-* [grapesjs-aviary](https://github.com/artf/grapesjs-aviary) - Add the Aviary Image Editor (dismissed, use the plugin below instead)
+* [grapesjs-plugin-export](https://github.com/artf/grapesjs-plugin-export) - Экспорт GrapesJS шаблонов в архив zip
+* [grapesjs-plugin-filestack](https://github.com/artf/grapesjs-plugin-filestack) - Добавляет Filestack uploader в Asset Manager
+* [grapesjs-plugin-ckeditor](https://github.com/artf/grapesjs-plugin-ckeditor) - Заменяет встроенный RTE на CKEditor
+* [grapesjs-aviary](https://github.com/artf/grapesjs-aviary) - Добавляет Aviary Image Editor (отклонен, используйте плагин ниже)
 * [grapesjs-tui-image-editor](https://github.com/artf/grapesjs-tui-image-editor) - GrapesJS TOAST UI Image Editor
-* [grapesjs-blocks-basic](https://github.com/artf/grapesjs-blocks-basic) - Basic set of blocks
-* [grapesjs-plugin-forms](https://github.com/artf/grapesjs-plugin-forms) - Set of form components and blocks
-* [grapesjs-navbar](https://github.com/artf/grapesjs-navbar) - Simple navbar component
-* [grapesjs-component-countdown](https://github.com/artf/grapesjs-component-countdown) - Simple countdown component
-* [grapesjs-style-gradient](https://github.com/artf/grapesjs-style-gradient) - Add `gradient` type input to the Style Manager
-* [grapesjs-style-filter](https://github.com/artf/grapesjs-style-filter) - Add `filter` type input to the Style Manager
-* [grapesjs-style-bg](https://github.com/artf/grapesjs-style-bg) - Full-stack background style property type, with the possibility to add images, colors, and gradients
-* [grapesjs-blocks-flexbox](https://github.com/artf/grapesjs-blocks-flexbox) - Add the flexbox block
-* [grapesjs-lory-slider](https://github.com/artf/grapesjs-lory-slider) - Slider component by using [lory](https://github.com/meandmax/lory)
-* [grapesjs-tabs](https://github.com/artf/grapesjs-tabs) - Simple tabs component
-* [grapesjs-tooltip](https://github.com/artf/grapesjs-tooltip) - Simple, CSS only, tooltip component for GrapesJS
-* [grapesjs-custom-code](https://github.com/artf/grapesjs-custom-code) - Embed custom code
-* [grapesjs-touch](https://github.com/artf/grapesjs-touch) - Enable touch support
-* [grapesjs-indexeddb](https://github.com/artf/grapesjs-indexeddb) - Storage wrapper for IndexedDB
-* [grapesjs-firestore](https://github.com/artf/grapesjs-firestore) - Storage wrapper for [Cloud Firestore](https://firebase.google.com/docs/firestore)
-* [grapesjs-parser-postcss](https://github.com/artf/grapesjs-parser-postcss) - Custom CSS parser for GrapesJS by using [PostCSS](https://github.com/postcss/postcss)
-* [grapesjs-typed](https://github.com/artf/grapesjs-typed) - Typed component made by wrapping Typed.js library
+* [grapesjs-blocks-basic](https://github.com/artf/grapesjs-blocks-basic) - Базовый набор блоков
+* [grapesjs-plugin-forms](https://github.com/artf/grapesjs-plugin-forms) - Набор компонентов формы и блоков
+* [grapesjs-navbar](https://github.com/artf/grapesjs-navbar) - Простой компонент панели навигации
+* [grapesjs-component-countdown](https://github.com/artf/grapesjs-component-countdown) - Простой компонент обратного отсчета
+* [grapesjs-style-gradient](https://github.com/artf/grapesjs-style-gradient) - Добавляет `gradient` type input в Style Manager
+* [grapesjs-style-filter](https://github.com/artf/grapesjs-style-filter) - Добавляет `filter` type input в Style Manager
+* [grapesjs-style-bg](https://github.com/artf/grapesjs-style-bg) - Full-stack тип свойства стиля фона, с возможностью добавления изображений, цветов и градиентов
+* [grapesjs-blocks-flexbox](https://github.com/artf/grapesjs-blocks-flexbox) - Добавляет блок flexbox
+* [grapesjs-lory-slider](https://github.com/artf/grapesjs-lory-slider) - Слайдер компонент с помощью [lory](https://github.com/meandmax/lory)
+* [grapesjs-tabs](https://github.com/artf/grapesjs-tabs) - Компонент простых вкладок
+* [grapesjs-tooltip](https://github.com/artf/grapesjs-tooltip) - Простой, только CSS, компонент всплывающей подсказки для GrapesJS
+* [grapesjs-custom-code](https://github.com/artf/grapesjs-custom-code) - Вставить пользовательский код
+* [grapesjs-touch](https://github.com/artf/grapesjs-touch) - Включить сенсорную поддержку
+* [grapesjs-indexeddb](https://github.com/artf/grapesjs-indexeddb) - Обертка для храненилища IndexedDB
+* [grapesjs-firestore](https://github.com/artf/grapesjs-firestore) - Обертка для храненилища [Cloud Firestore](https://firebase.google.com/docs/firestore)
+* [grapesjs-parser-postcss](https://github.com/artf/grapesjs-parser-postcss) - Пользовательский анализатор CSS для GrapesJS использующий [PostCSS](https://github.com/postcss/postcss)
+* [grapesjs-typed](https://github.com/artf/grapesjs-typed) - Компонент печатной машинки на основе Typed.js 
 
 ### Presets
 * [grapesjs-preset-webpage](https://github.com/artf/grapesjs-preset-webpage) - Webpage Builder
@@ -200,7 +202,7 @@ $ npm test
 * [grapesjs-mjml](https://github.com/artf/grapesjs-mjml) - Newsletter Builder with MJML components
 
 
-Find out more about plugins here: [Creating plugins](https://github.com/artf/grapesjs/wiki/Creating-plugins)
+Узнайте больше о плагинах здесь: [Creating plugins](https://github.com/artf/grapesjs/wiki/Creating-plugins)
 
 
 
@@ -208,7 +210,7 @@ Find out more about plugins here: [Creating plugins](https://github.com/artf/gra
 
 ## Support
 
-If you like the project support it with a donation of your choice or become a backer/sponsor via [Open Collective](https://opencollective.com/grapesjs)
+Если вам нравится проект, поддержите его пожертвованием на ваш выбор или станьте спонсором / спонсором через [Open Collective](https://opencollective.com/grapesjs)
 
 [![PayPalMe](http://grapesjs.com/img/ppme.png)](https://paypal.me/grapesjs)
 [![Bitcoin](https://user-images.githubusercontent.com/11614725/52977952-87235f80-33cf-11e9-9607-7a9a354e1155.png)](https://commerce.coinbase.com/checkout/fc90b940-558d-408b-a166-28a823c98173)
